@@ -1,0 +1,17 @@
+{
+  "AppName": "Carousel firestore",
+
+  "carousel": {
+    "images": [
+      "bar-café.jpg",
+      "landscape.jpg",
+      "morse.jpg",
+      "phare.jpg",
+      "stone.jpg",
+      "peche_au_gros.jpg",
+      "vacances-famille.jpg"
+    ],
+    "timer": 4000
+ }
+
+}
