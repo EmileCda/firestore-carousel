@@ -15,6 +15,11 @@ const timerCount = localData.carousel.timer;
  * timer value is in json file key = carousel.timer
  */
 
+export type  TSlide ={
+  name : string,
+  caption : string,
+}
+
 export default function Carousel() {
   // stat for img loaded from firestore
   const [imgList, setImgList] = useState(urlCarousel);
@@ -30,10 +35,9 @@ export default function Carousel() {
     // fetching image from firestore
     function fetchImg() {
       let newPicList = Array(urlCarousel.length);
-      urlCarousel.map(async (url: string, index: number) => {
-        const newUrl = await getDownloadURL(ref(firebaseStorage, "images/carousel/"+url));
-        newPicList[index] = newUrl;
-
+      urlCarousel.map(async (url: TSlide, index: number) => {
+        const newUrl = await getDownloadURL(ref(firebaseStorage, "images/carousel/"+ url.name));
+        newPicList[index] = { name : newUrl,caption:url.caption} ;
         if (!newPicList.includes(undefined)) {
           // stop loading when every pic have and ulr
           setLoading(false);
@@ -72,13 +76,13 @@ export default function Carousel() {
   return (
     <>
       <SlideContainer>
-        {imgList.map((url: string, index: number) => (
+        {imgList.map((url: TSlide, index: number) => (
           <Slide key={index} display={index === displayIndex}>
             <img
-              src={url ? url : "Empty seat"}
+              src={url.name ? url.name : "Empty seat"}
               alt={`image n° ${index}`}
             />
-            <Caption>texte caption</Caption>
+            <Caption>{url.caption} </Caption>
           </Slide>
         ))}
         <ButtonGroup>

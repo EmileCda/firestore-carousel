@@ -3,15 +3,26 @@
 
   "carousel": {
     "images": [
-      "bar-café.jpg",
-      "landscape.jpg",
-      "morse.jpg",
-      "phare.jpg",
-      "stone.jpg",
-      "peche_au_gros.jpg",
-      "vacances-famille.jpg"
+      {
+        "name": "bar-café.jpg",
+        "caption": "un bar qui fait du café dans une ambiance flou"
+      },
+      { "name": "landscape.jpg", "caption": "un paysage de campagne " },
+      {
+        "name": "morse.jpg",
+        "caption": "Un morse avec d'autre morse en noir et blanc"
+      },
+      { "name": "phare.jpg", "caption": "le phare du bout du monde" },
+      { "name": "stone.jpg", "caption": "stone edge ou son cousin " },
+      {
+        "name": "peche_au_gros.jpg",
+        "caption": "la peche au gros a carry le rouet"
+      },
+      {
+        "name": "vacances-famille.jpg",
+        "caption": "Famille en vacance sur la plage "
+      }
     ],
     "timer": 4000
- }
-
+  }
 }
