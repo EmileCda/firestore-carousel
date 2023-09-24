@@ -32,3 +32,17 @@ firestore-carousel
 1. `src/styles` : Dossier contenant le style de l'application (styled-components)
 1. `src/images` : Dossier contenant les images l'application
 1. `src/lib` : Dossier contenant tout le code externe à React
+
+# implémentation
+
+1. ajouter fontawesome
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+```
